@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="main-content" style="margin-left:0px;">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <img src="~/Content/images/banner1.jpg" alt="ServiceMadeEasy.In" class="img-responsive" style="width:100%;">
+        </div>
+    </div>
+    <div class="wrap-content container" id="container" style="margin-top:15px">
+        <!-- start: YOUR CONTENT HERE -->
+        @{
+            Html.RenderPartial("~/Views/Home/_Packages.cshtml");
+        }
+        <!-- end: YOUR CONTENT HERE -->
+    </div>
+</div>
+
