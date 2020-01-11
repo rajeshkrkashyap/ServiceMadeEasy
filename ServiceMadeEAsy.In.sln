@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTepmlate", "WebTepmlate\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceMadeEasy.In", "ServiceMadeEasy.In\ServiceMadeEasy.In.csproj", "{7FDD0C81-E348-4830-B0BF-E583771DFC0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceMadeEasy.Com", "ServiceMadeEasy.Com\ServiceMadeEasy.Com.csproj", "{9B21C338-B316-46AD-9BD3-3A4CB5EF68BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7FDD0C81-E348-4830-B0BF-E583771DFC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDD0C81-E348-4830-B0BF-E583771DFC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDD0C81-E348-4830-B0BF-E583771DFC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B21C338-B316-46AD-9BD3-3A4CB5EF68BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B21C338-B316-46AD-9BD3-3A4CB5EF68BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B21C338-B316-46AD-9BD3-3A4CB5EF68BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B21C338-B316-46AD-9BD3-3A4CB5EF68BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

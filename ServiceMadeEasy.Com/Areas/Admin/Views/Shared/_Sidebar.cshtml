@@ -1,0 +1,226 @@
+﻿@{
+    string title = ViewBag.Title;
+    string isOpenSyllabus = "";
+    string isOpenCourse = "";
+    string isActiveClass = "";
+    string isActiveSubject = "";
+    string isActiveChapter = "";
+    string isActiveTopic = "";
+
+    string isOpenQuestions = "";
+    string isActiveSingleQuestion = "";
+    string isActiveMultipleQuestion = "";
+    string isActiveIntegerQuestion = "";
+    string isActiveMatchQuestion = "";
+    string isActivePassageOrAssertionQuestion = "";
+    string isActiveImages = "";
+
+    string isOpenTestPaper = "";
+    string isActiveTestPaper = "";
+    string isActivePackage = "";
+
+    switch (title)
+    {
+        case "Class":
+            isOpenCourse = "open active";
+            isActiveClass = "active";
+            break;
+        case "Subject":
+            isOpenCourse = "open active";
+            isActiveSubject = "active";
+            break;
+        case "Chapter":
+            isOpenCourse = "open active";
+            isActiveChapter = "active";
+            break;
+        case "Topic":
+            isOpenCourse = "open active";
+            isActiveTopic = "active";
+            break;
+        case "SingleQuestions":
+            isOpenQuestions = "open active";
+            isActiveSingleQuestion = "active";
+            break;
+        case "MultipleQuestions":
+            isOpenQuestions = "open active";
+            isActiveMultipleQuestion = "active";
+            break;
+        case "IntegerQuestions":
+            isOpenQuestions = "open active";
+            isActiveIntegerQuestion = "active";
+            break;
+        case "MatchQuestions":
+            isOpenQuestions = "open active";
+            isActiveMatchQuestion = "active";
+            break;
+        case "PassageOrAssertionQuestion":
+            isOpenQuestions = "open active";
+            isActivePassageOrAssertionQuestion = "active";
+            break;
+
+        case "Syllabus":
+            isOpenSyllabus = "open active";
+            break;
+
+        case "TestPaper":
+            isOpenTestPaper = "open active";
+            isActiveTestPaper = "active";
+            break;
+
+        case "Images":
+            isActiveImages = "active";
+            break;
+ 
+        case "Package":
+            isActivePackage = "active";
+            break;
+        default:
+            break;
+    }
+
+}
+<div class="sidebar app-aside" id="sidebar" style="top: 55px !important;">
+    <div class="sidebar-container perfect-scrollbar">
+        <nav>
+            <!-- start: MAIN NAVIGATION MENU -->
+            <ul class="main-navigation-menu">
+                <li>
+                    <a href="#">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-home"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Dashboard </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="@isOpenCourse">
+                    <a href="javascript:void(0)">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-layout-grid2"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Course </span><i class="icon-arrow"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="@isActiveClass">
+                            <a href="/Admin/Classes/Index">
+                                <span class="title">Class</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveSubject">
+                            <a href="/Admin/Subjects/Index">
+                                <span class="title">Subject</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveChapter">
+                            <a href="/Admin/Chapters/Index">
+                                <span class="title">Chapter</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveTopic">
+                            <a href="/Admin/Topics/Index">
+                                <span class="title">Topic</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="@isOpenQuestions">
+                    <a href="javascript:void(0)">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-layout-grid2"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Questions </span><i class="icon-arrow"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="@isActiveSingleQuestion">
+                            <a href="/Admin/SingleQuestions/Index">
+                                <span class="title">Single</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveMultipleQuestion">
+                            <a href="/Admin/MultipleQuestions/Index">
+                                <span class="title">Multiple</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveIntegerQuestion">
+                            <a href="/Admin/IntegerQuestions/Index">
+                                <span class="title">Integer</span>
+                            </a>
+                        </li>
+                        <li class="@isActiveMatchQuestion">
+                            <a href="/Admin/MatchQuestions/Index">
+                                <span class="title">Matching</span>
+                            </a>
+                        </li>
+                        <li class="@isActivePassageOrAssertionQuestion">
+                            <a href="/Admin/PassageOrAssertionQuestions/Index">
+                                <span class="title">Passge Or Assertion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="@isOpenSyllabus">
+                    <a href="/Admin/Syllabus/Index">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-layout-grid2"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Syllabus </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="@isOpenTestPaper">
+                    <a href="/Admin/TestPapers/Index">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-layout-grid2"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Test Paper </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="@isActivePackage">
+                    <a href="/Admin/Packages/Index">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-gift"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Package </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="@isActiveImages">
+                    <a href="/Admin/ImageResources/Index">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="ti-camera"></i>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Images </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- end: MAIN NAVIGATION MENU -->
+        </nav>
+    </div>
+</div>

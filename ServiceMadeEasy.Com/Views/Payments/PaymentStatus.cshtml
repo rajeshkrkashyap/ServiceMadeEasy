@@ -1,0 +1,48 @@
+﻿@model ServiceMadeEasy.Com.Models.ApplicationUserPackage
+@{
+    ViewBag.Title = "PaymentStatus";
+    if (TempData.Peek("memberName") != null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_AreasLayout.cshtml";
+    }
+}
+
+<h2>Payment Status</h2>
+<div>
+    @if (@ViewBag.outputHTML == "Checksum Matched")
+    {
+        <h4 style="color:green">Payment has been successfully done.</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                OrderID
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ORDERID)
+            </dd>
+            <dt>
+                Transaction Id
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TXNID)
+            </dd>
+            <dt>
+                Transaction Date
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TXNDATE)
+            </dd>
+            
+        </dl>
+        <h4>Please click <a href="/Packages/MemberPackage">here</a> to see your package.</h4>
+    }
+    else
+    {
+        <h4 style="color:red">Transaction failed.</h4>
+    }
+
+</div>

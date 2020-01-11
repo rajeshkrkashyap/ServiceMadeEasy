@@ -1,0 +1,39 @@
+﻿<div class="navbar-collapse collapse">
+    <ul class="nav navbar-right">
+        <li class="dropdown current-user">
+            <a href="/Home/Index" class="dropdown-toggle">
+                <i class="fa fa-home"></i> <span class="username">HOME</span>
+            </a>
+        </li>
+        <li class="dropdown current-user">
+            <a href="/admin/Home/Index" class="dropdown-toggle">
+                <i class="fa fa-home"></i> <span class="username">Dashboard</span>
+            </a>
+        </li>
+        <!-- start: MESSAGES DROPDOWN -->
+        <li class="dropdown">
+            <a href class="dropdown-toggle" data-toggle="dropdown">
+                <span class="dot-badge partition-red"></span> <i class="ti-comment"></i> <span>MESSAGES</span>
+            </a>
+
+        </li>
+        <!-- end: MESSAGES DROPDOWN -->
+        <!-- start: USER OPTIONS DROPDOWN -->
+        <li class="dropdown current-user">
+            <a href class="dropdown-toggle">
+                <i class="fa fa-user"></i> <span class="username">Admin</span>
+            </a>
+            <a href="/Account/LogOff" class="dropdown-toggle">
+                <i class="fa fa-lock"></i> <span class="username">LogOut</span>
+            </a>
+
+        </li>
+        <!-- end: USER OPTIONS DROPDOWN -->
+    </ul>
+    <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+    <div class="close-handle visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+        <div class="arrow-left"></div>
+        <div class="arrow-right"></div>
+    </div>
+    <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+</div>

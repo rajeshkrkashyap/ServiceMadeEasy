@@ -1,0 +1,57 @@
+﻿@model ServiceMadeEasy.Com.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+
+        <!-- start: LOGIN BOX -->
+        <div class="box-login">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend>
+                        Sign in to your account
+                    </legend>
+                    <p>
+                        Please enter your name and password to log in.
+                        @Html.ValidationSummary(null, new { @class = "text-danger" })
+                    </p>
+                    <div class="form-group">
+                        <span class="input-icon">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="form-group form-actions">
+                        <span class="input-icon">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Password" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            <i class="fa fa-lock"></i>
+                            <a class="forgot" href="/Account/ForgotPassword">
+                                I forgot my password
+                            </a>
+                        </span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary pull-right">
+                            Login <i class="fa fa-arrow-circle-right"></i>
+                        </button>
+                    </div>
+                    <div class="new-account">
+                        Don't have an account yet?
+                        <a href="/Account/Register/?ReturnUrl=%2FPackages%2FBuy%2F1">
+                            Please create an account.
+                        </a>
+                    </div>
+                </fieldset>
+            }
+
+        </div>
+        <!-- end: LOGIN BOX -->
+    </div>
+</div>
